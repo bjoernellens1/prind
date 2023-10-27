@@ -1,10 +1,69 @@
+accessControl:
+  userfile: /octoprint/octoprint/users.yaml
+api:
+  key: 7DF9885495464E2B9D78D8B5D22D59FB
+plugins:
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1691060700
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1684929600
+      _plugins:
+        read_until: 1694995200
+      _releases:
+        read_until: 1696862700
+  classicwebcam:
+    _config_version: 1
+    snapshot: http://webcam:8080/snapshot
+    stream: /webcam/stream
+  discovery:
+    upnpUuid: 1cd5b9ba-bbcb-4c2f-8d47-b8cc7631c776
+  errortracking:
+    unique_id: 996c0753-dff0-427f-a004-e929725b7617
+  gcodeviewer:
+    _config_version: 1
+  klipper:
+    _config_version: 4
+    connection:
+      port: /opt/printer_data/run/klipper.tty
+  softwareupdate:
+    _config_version: 9
+  tracking:
+    enabled: false
+    unique_id: 012001c5-9351-4089-b188-e5fc36b184a9
+  virtual_printer:
+    _config_version: 1
+printerProfiles:
+  default: _default
 serial:
   additionalPorts:
   - /opt/printer_data/run/klipper.tty
+  - /tmp/printer
   autoconnect: true
   port: /opt/printer_data/run/klipper.tty
-webcam:
-  snapshot: http://webcam:8080/snapshot
-  stream: /webcam/stream
-accessControl:
-  userfile: /octoprint/octoprint/users.yaml
+server:
+  firstRun: false
+  onlineCheck:
+    enabled: false
+  pluginBlacklist:
+    enabled: true
+  secretKey: rs4mAlLsQRLIqiiBnRHGBrmWxFuZlxoJ
+  seenWizards:
+    backup: null
+    classicwebcam: 1
+    corewizard: 4
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 210
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 180
+    name: PLA
